@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keerati Portfolio Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#0a0f16;color:#eef2ff;overflow-x:hidden}
+.bg{position:fixed;inset:0;background:
+radial-gradient(circle at 20% 20%,rgba(59,130,246,.18),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(99,102,241,.15),transparent 25%),
+radial-gradient(circle at 50% 80%,rgba(59,130,246,.10),transparent 30%);
+z-index:-1}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+.glass{width:min(1200px,95%);background:rgba(17,24,39,.75);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:32px;padding:40px}
+.center{text-align:center}
+.profile{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid #3b82f6;box-shadow:0 0 50px rgba(59,130,246,.35)}
+h1{font-size:3.2rem}
+.sub{color:#b7c0d1}
+.cat{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:35px}
+.banner{height:190px;border-radius:22px;overflow:hidden;position:relative;text-decoration:none;color:#fff}
+.banner img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.banner:hover img{transform:scale(1.1)}
+.banner:hover{transform:translateY(-8px)}
+.ov{position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.92));display:flex;align-items:end;padding:20px}
+section{padding:90px 7%}
+.title{text-align:center;font-size:2.4rem;margin-bottom:30px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:25px}
+.card{background:#131a22;border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden;transition:.4s}
+.card:hover{transform:translateY(-10px);box-shadow:0 25px 60px rgba(59,130,246,.2)}
+.card img{width:100%;height:230px;object-fit:cover}
+.content{padding:22px}
+.content p{color:#b8c0cc;margin-top:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{padding:11px 16px;border-radius:12px;text-decoration:none;color:white;background:#2563eb}
+.btn.secondary{background:#1f2937}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8)}
+.modal-box{max-width:700px;margin:8% auto;background:#131a22;padding:25px;border-radius:24px}
+.close{float:right;cursor:pointer;font-size:28px}
+footer{text-align:center;padding:40px;color:#94a3b8}
+@media(max-width:768px){.cat{grid-template-columns:1fr}h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<div class="hero">
+<div class="glass center">
+<img src="profile.jpg" class="profile">
+<h1>GUY KIRATI</h1>
+<p class="sub">@Portfolio 2026</p>
+
+<div class="cat">
+<a class="banner" href="#web"><img src="banner-web.jpg"><div class="ov"><h3>🌐 เว็บไซต์</h3></div></a>
+<a class="banner" href="#game"><img src="banner-game.jpg"><div class="ov"><h3>🎮 เกม</h3></div></a>
+<a class="banner" href="#program"><img src="banner-program.jpg"><div class="ov"><h3>💻 โปรแกรม</h3></div></a>
+<a class="banner" href="#contact"><img src="banner-contact.jpg"><div class="ov"><h3>📞 ติดต่อ</h3></div></a>
+</div>
+</div>
+</div>
+
+<section id="web" class="reveal">
+<h2 class="title">ผลงานเว็บไซต์</h2>
+<div class="projects">
+<div class="card">
+<img src="web1.jpg">
+<div class="content">
+<h3>[Web] Memberlist Website</h3>
+<p>⚡ Realtime Member Management System
+พัฒนาด้วย Firebase Database รองรับการแสดงผลข้อมูลสมาชิกแบบเรียลไทม์ พร้อมระบบเพิ่ม แก้ไข และลบข้อมูลทันที ทุกการเปลี่ยนแปลงจะซิงค์อัตโนมัติในทุกอุปกรณ์</p>
+<div class="btns">
+<a class="btn" href="https://elitestyle.vercel.app/" target="_blank">เปิดเว็บไซต์</a>
+<a class="btn secondary" href="https://example.com" target="_blank">คลิปการใช้งาน</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="game" class="reveal">
+<h2 class="title">ผลงานเกม</h2>
+<div class="projects">
+<div class="card">
+<img src="game1.jpg">
+<div class="content">
+<h3>[Roblox] Bangbuathong Street</h3>
+<p>โลกเสมือนสำหรับการพบปะสังสรรค์ของผู้เล่น พร้อมระบบหาเงิน ร้านค้า และกิจกรรมภายในเกม ผู้เล่นสามารถสะสมเงิน ซื้อไอเทม และสร้างปฏิสัมพันธ์กับผู้เล่นคนอื่นได้อย่างอิสระในบรรยากาศ Community ที่มีชีวิตชีวา</p>
+<div class="btns">
+<a class="btn" href="https://example.com" target="_blank">เล่นเกม</a>
+<a class="btn secondary" href="https://example.com" target="_blank">คลิปการเล่น</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="program" class="reveal">
+<h2 class="title">ผลงานโปรแกรม</h2>
+<div class="projects">
+<div class="card">
+<img src="program1.jpg">
+<div class="content">
+<h3>Desktop Program</h3>
+<p>โปรแกรมจัดการข้อมูลบนคอมพิวเตอร์</p>
+<div class="btns">
+<a class="btn" href="https://example.com" target="_blank">ดาวน์โหลด</a>
+<a class="btn secondary" href="https://example.com" target="_blank">วิธีใช้</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2 class="title">ติดต่อ</h2>
+<div class="projects">
+<div class="card">
+<img src="program1.jpg">
+<div class="content">
+<h3>ช่องทางการติดต่อค้าบ</h3>
+<div class="btns">
+<a class="btn" href="https://example.com" target="_blank">instagram</a>
+<a class="btn secondary" href="https://example.com" target="_blank">DISCORD</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="modal" id="modal">
+<div class="modal-box">
+<span class="close" onclick="closeGuide()">×</span>
+<h2>วิธีใช้งาน</h2><br>
+<p id="guideText"></p>
+</div>
+</div>
+
+<footer>© 2026 Keerati Portfolio</footer>
+
+<script>
+const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}));
+document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
+
+function guide(t){document.getElementById('guideText').innerHTML=t;document.getElementById('modal').style.display='block';}
+function closeGuide(){document.getElementById('modal').style.display='none';}
+
+document.addEventListener('mousemove',e=>{
+document.querySelector('.bg').style.transform=`translate(${e.clientX/80}px,${e.clientY/80}px)`;
+});
+</script>
+</body>
+</html>
